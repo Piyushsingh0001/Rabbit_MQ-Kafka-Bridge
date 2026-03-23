@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>MeterConsumer</RootNamespace>
+    <AssemblyName>MeterConsumer</AssemblyName>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>false</SelfContained>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Windows Service host -->
+    <PackageReference Include="Confluent.Kafka" Version="2.13.2" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="10.0.0" />
+    <!-- RabbitMQ v7: full async consumer support -->
+    <PackageReference Include="RabbitMQ.Client" Version="7.0.0" />
+    <!-- Confluent Kafka: delivery-report-based producer -->
+  </ItemGroup>
+
+</Project>
